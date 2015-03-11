@@ -1,0 +1,7 @@
+---
+# vars file for kvm (Ubuntu specific)
+
+kvm_packages:
+  - qemu-kvm
+  - libvirt-bin
+  - virtinst
