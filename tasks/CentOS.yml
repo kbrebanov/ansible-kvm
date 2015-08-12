@@ -1,2 +1,23 @@
 ---
-# tasks file for kvm (CentOS specific)
+- name: Install KVM packages
+  yum: 
+    name: "{{ item }}"
+    state: installed
+  with_items: kvm_packages
+  tags:
+    - kvm
+    - install
+
+- name: Remove invalid sysctl entries (bug workaround)
+  sysctl: 
+    name: "{{ item }}"
+    state: absent
+    reload: no
+  with_items:
+    - "net.bridge.bridge-nf-call-ip6tables"
+    - "net.bridge.bridge-nf-call-iptables"
+    - "net.bridge.bridge-nf-call-arptables"
+  tags:
+    - kvm
+    - configure
+

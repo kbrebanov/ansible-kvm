@@ -1,2 +1,12 @@
 ---
-# handlers file for kvm
+- name: Include distribution specific variables
+  include_vars: "{{ ansible_distribution }}.yml"
+  tags:
+    - kvm
+
+- name: restart libvirtd
+  service:
+    name: "{{ kvm_libvirtd_service_name }}"
+    state: restarted
+  tags:
+    - kvm

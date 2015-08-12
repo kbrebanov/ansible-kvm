@@ -2,6 +2,11 @@
 # tasks file for kvm (Ubuntu specific)
 
 - name: Install KVM packages
-  apt: name={{ item }} state=present update_cache=yes
+  apt: 
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
   with_items: kvm_packages
-  tags: kvm
+  tags: 
+    - kvm
+    - install

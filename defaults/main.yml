@@ -1,2 +1,23 @@
 ---
-# defaults file for kvm
+kvm_listen_tls: true
+kvm_listen_tcp: false
+kvm_tls_port: 16514
+kvm_tcp_port: 16509
+kvm_listen_address: 0.0.0.0
+kvm_mdns_adv: false
+kvm_mdns_name: "{{ ansible_hostname }}"
+kvm_auth_tcp: none
+kvm_auth_tls: none
+kvm_key_file: /etc/pki/libvirt/private/serverkey.pem
+kvm_cert_file: /etc/pki/libvirt/servercert.pem
+kvm_ca_file: /etc/pki/CA/cacert.pem
+kvm_crl_file: /etc/pki/CA/crl.pem
+kvm_no_verify_certificate: false
+kvm_max_clients: 20
+kvm_max_queued_clients: 1000
+kvm_min_workers: 5
+kvm_max_workers: "{{ kvm_max_clients }}"
+kvm_log_level: 3
+kvm_log_filters: ""
+kvm_log_outputs: ""
+kvm_vnc_listen: 127.0.0.1
