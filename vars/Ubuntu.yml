@@ -5,3 +5,6 @@ kvm_packages:
   - qemu-kvm
   - libvirt-bin
   - virtinst
+
+kvm_libvirtd_service_name: "libvirt-bin"
+

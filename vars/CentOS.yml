@@ -1,2 +1,14 @@
 ---
 # vars file for kvm (CentOS specific)
+
+kvm_packages:
+  - "@virt*"
+  - "dejavu-lgc-*"
+  - "xorg-x11-xauth"
+  - "tigervnc"
+  - "libguestfs-tools"
+  - "policycoreutils-python"
+  - "bridge-utils"
+
+kvm_libvirtd_service_name: "libvirtd"
+
