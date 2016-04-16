@@ -1,7 +1,7 @@
 kvm
 ===
 
-[![Ansible Role](https://img.shields.io/ansible/role/3299.svg)](https://galaxy.ansible.com/list#/roles/3299)
+[![Build Status](https://travis-ci.org/kbrebanov/ansible-kvm.svg?branch=master)](https://travis-ci.org/kbrebanov/ansible-kvm)
 
 Installs KVM.
 
