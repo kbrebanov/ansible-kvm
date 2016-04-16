@@ -24,10 +24,10 @@ Example Playbook
 ----------------
 
 Install KVM
-```
+```yaml
 - hosts: all
   roles:
-    - { role: kbrebanov.kvm }
+    - kbrebanov.kvm
 ```
 
 License
